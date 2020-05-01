@@ -1,0 +1,33 @@
+Can implement relationships between models by:
+    - ** belongs_to
+    - ** has_many
+    - ** has_many:through
+
+    - has_one   
+    - has_one:through
+    - 
+
+How to implement these relationships:
+    1. Write migration that creates tables with associations
+    2. Use Active Record macros in the models
+
+Song Model 
+    - A song belongs to an artist and genre 
+    -------------------------------------------
+    | id  name            artist_id   genre_id|
+    | 2   Shake it off    1           1       |
+    ___________________________________________
+
+Artist Model
+    - Will have many songs 
+    - and many genres through songs
+
+Genre Model
+    - Has many songs
+    - Has many artists through songs 
+
+AR Macros(or methods)
+    - has_many
+    - has_many through
+    - belongs_to
+
